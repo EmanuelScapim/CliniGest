@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto S.A.C.O</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/cadastro.css" />
+  </head>
+  <body>
+
+    <!-- MAIN -->
+
+    <main>
+      <!-- HEADER DA MAIN -->
+
+      <div class="title-header">
+        <!-- TÍTULO DO HEADER -->
+
+        <a href="javascript:history.back()"><h1>< Cadastro de usuário</h1></a>
+
+        <!-- BOTÕES DE AÇÃO DO HEADER -->
+
+        <div class="action-buttons">
+          <button type="submit" form="form" class="save">
+            <img src="../img/Save.svg" alt="" />
+            Salvar
+          </button>
+          <button type="reset" form="form" class="cancel">
+            <img src="../img/Vector.svg" alt="" />
+            Cancelar
+          </button>
+        </div>
+      </div>
+
+      <!-- FOTO DE PERFIL E BOTÃO DE ADD FOTO -->
+
+      <div class="card">
+        <div class="card-title">
+          <h3>DADOS PESSOAIS</h3>
+        </div>
+
+        <div class="block-1">
+          <div class="foto-perfil">
+            <figure>
+              <img src="../img/pessoa.svg" alt="" />
+            </figure>
+            <button type="file">
+              <input type="file" id="add-photo" />
+              <img src="../img/plus.svg" alt="" />
+              <label for="add-photo">Adicionar foto</label>
+            </button>
+          </div>
+        </div>
+
+        <!-- CAMPOS DE PREENCHIMENTO DE DADOS DO USUÁRIO -->
+
+        <div class="block-2">
+          <div class="nome-group">
+            <label for="nome">Nome e sobrenome:</label>
+            <div class="nome-sobrenome">
+              <div class="nome">
+                <input
+                  type="text"
+                  name="nome"
+                  id="nome"
+                  placeholder="Insira o nome "
+                  class="block"
+                />
+              </div>
+              <div class="sobrenome">
+                <input
+                  type="text"
+                  name="sobrenome"
+                  id="sobrenome"
+                  placeholder="Insira o sobrenome "
+                  class="block"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="email-group">
+            <label for="email">E-mail:</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Insira o e-mail "
+              class="block"
+            />
+          </div>
+
+          <div class="senha-group">
+            <label for="senha">Senha:</label>
+            <input
+              type="text"
+              name="senha"
+              id="senha"
+              placeholder="Insira a senha "
+              class="block"
+            />
+          </div>
+        </div>
+
+        <div class="block-3">
+          <div class="accesso-group">
+            <label for="acesso">Nível de acesso:</label>
+            <select name="acesso" id="acesso" class="block-3">
+              <option value="Admin">Admin</option>
+              <option value="Dentista">Dentista</option>
+              <option value="Secretária">Secretária</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pacientes</title>
+    <link rel="stylesheet" href="../css/pacientes.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <!-- MAIN -->
+    <main>
+      <form action="#" id="form">
+        <!-- HEADER DA MAIN -->
+
+        <div class="title-header">
+          <!-- TÍTULO DO HEADER -->
+           
+          <a href="javascript:history.back()"><h1>< Pacientes</h1></a>
+
+
+          <!-- BOTÕES DE AÇÃO DO HEADER -->
+
+          <div class="action-buttons">
+            <div class="add">
+              <a href="cadastro-pac.html">
+                <img src="../img/plus-branco.svg" alt="" />
+                Adicionar novo
+              </a>
+            </div>
+
+            <div class="delete">
+              <a href="#">
+                <img src="../img/lixeira.svg" alt="" />
+                Excluir
+              </a>
+            </div>
+          </div>
+
+          <div class="searchfilter">
+            <div class="searchbar">
+              <img src="../img/search.svg" alt="" />
+              <input type="text" placeholder="Pesquisar" />
+            </div>
+
+            <div class="filtrar">
+              <label for="filtrar">Filtrar por:</label>
+              <select name="filtrar" id="filtrar">
+                <option value="id">ID</option>
+                <option value="nome">Nome</option>
+                <option value="datanascimento">Data de nascimento</option>
+                <option value="endereco">Endereço</option>
+                <option value="responsavel">Responsável</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARDS -->
+
+        <div class="header-card">
+          <div class="nomeid-group">
+            <input type="checkbox" name="" id="" class="check" />
+            <a href="">
+              <img src="../img/ordenacao.svg" alt="" class="id" />
+              ID
+            </a>
+            <a href="">
+              <img src="../img/ordenacao.svg" alt="" class="nome" />
+              Nome
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="nome-group">
+            <input type="checkbox" name="" id="" class="check" />
+            <p>001</p>
+            <img src="../img/pessoa.svg" alt="" />
+            <h3 class="nome">Arthur Cavalcante</h3>
+          </div>
+
+          <h4 class="nascimento">12/10/1970</h4>
+
+          <h4 class="endereco">Rua das Acácias, 120 - Jardim Ipê</h4>
+
+          <h5 class="dtra">DRA. ALINE.RESENDE</h5>
+
+          <a href="#">
+            <img src="../img/tres_pontos.svg" alt="" />
+          </a>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+/* MAIN */
+/* GERAL */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: helvetica;
+  box-sizing: border-box;
+}
+main {
+  display: block;
+  width: calc(100vw - 223px);
+  margin-left: 223px;
+}
+/* MAIN - HEADER DO TÍTULO PRINCIPAL */
+
+.title-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 25px;
+  padding-left: 35px;
+  max-width: 100vw;
+}
+.title-header a {
+  text-decoration: none;
+  color: #000;
+}
+.title-header .action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-left: 30px;
+}
+
+.title-header .save {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  width: 111px;
+  height: 38px;
+  background-color: #648fec;
+  border-radius: 9px;
+  border: solid #a2a2a2 1px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.title-header .cancel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  width: 111px;
+  height: 38px;
+  background-color: #ffffff;
+  border-radius: 9px;
+  border: solid #a2a2a2 1px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #454545;
+  transition: 0.2s;
+}
+
+.title-header .save:hover {
+  background-color: #5b83d8;
+}
+
+.title-header .cancel:hover {
+  background-color: #e7e7e7;
+}
+
+/* RESPONSIVIDADE */
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  main {
+    margin-left: 50px;
+    width: calc(100vw - 50px);
+  }
+}
+
+/* celular 576px */
+
+@media (max-width: 576px) {
+  .title-header {
+    padding: 25px;
+    padding-right: 0;
+    margin: 10px;
+    gap: 10px;
+  }
+  .title-header h1 {
+    font-size: 25px;
+  }
+  .title-header .action-buttons {
+    margin-left: 5%;
+    gap: 10px;
+  }
+}
+
+/* celular 340px */
+@media (max-width: 340px) {
+  .title-header h1 {
+    font-size: 20px;
+  }
+}

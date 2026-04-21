@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de pacientes</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/cadastro-pac.css" />
+  </head>
+  <body>
+    <main>
+      <form action="#" id="form">
+        <!-- HEADER DA MAIN -->
+
+        <div class="title-header">
+          <!-- TÍTULO DO HEADER -->
+
+          <a href="javascript:history.back()"><h1>< Cadastro de paciente</h1></a>
+
+          <!-- BOTÕES DE AÇÃO DO HEADER -->
+
+          <div class="action-buttons">
+            <button type="submit" form="form" class="save">
+              <img src="../img/Save.svg" alt="" />
+              Salvar
+            </button>
+            <button type="reset" form="form" class="cancel">
+              <img src="../img/Vector.svg" alt="" />
+              Cancelar
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD 1 - DADOS PESSOAIS -->
+
+        <div class="card">
+          <!-- TITULO DO CARD -->
+
+          <div class="card-title">
+            <h3>DADOS PESSOAIS</h3>
+          </div>
+
+          <!-- BLOCO 1 - FOTO DE PERFIL E BOTÃO DE ADD FOTO -->
+
+          <div class="block-1">
+            <div class="foto-perfil">
+              <figure>
+                <img src="../img/pessoa.svg" alt="" />
+              </figure>
+              <button type="file">
+                <input type="file" id="add-photo" />
+                <img src="../img/plus.svg" alt="" />
+                <label for="add-photo">Adicionar foto</label>
+              </button>
+            </div>
+          </div>
+
+          <!-- BLOCO 2 - NOME, NASCIMENTO E CPF -->
+
+          <div class="block-2">
+            <div class="name-group">
+              <label for="nome">Nome completo:</label>
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                placeholder="Insira o nome do paciente"
+                class="block"
+              />
+            </div>
+
+            <div class="nascimento-group">
+              <label for="nascimento">Data de nascimento:</label>
+              <input
+                type="date"
+                name="nascimento"
+                id="nacimento"
+                class="block"
+              />
+            </div>
+
+            <div class="cpf-group">
+              <label for="cpf">CPF:</label>
+              <input
+                type="number"
+                name="cpf"
+                id="cpf"
+                placeholder="Insira somente números "
+                maxlength="11"
+                class="block"
+              />
+            </div>
+          </div>
+
+          <!-- BLOCO 3 - TELEFONE E EMAIL -->
+
+          <div class="block-3">
+            <div class="telefone-group">
+              <label for="telefone">Telefone:</label>
+              <input
+                type="number"
+                name="telefone"
+                id="telefone"
+                placeholder="(DDD) 0 0000-0000 "
+                class="block"
+              />
+            </div>
+
+            <div class="email-group">
+              <label for="email">E-mail:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Insira o email"
+                class="block"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <!-- TÍTULO DO CARD 2 -->
+
+        <!-- <h3>endereço</h3> -->
+
+        <!-- DIV QUE ENGLOBA TODO O CONTEÚDO Do card 2 -->
+
+        <div class="card">
+          <!-- TITULO DO CARD -->
+
+          <div class="card-title">
+            <h3>ENDEREÇO</h3>
+          </div>
+
+          <!-- CAMPOS DE PREENCHIMENTO DE ENDEREÇO -->
+          <!-- BLOCO 1 -->
+
+          <div class="block-1">
+            <div class="cep-group">
+              <div class="input">
+                <label for="nome">CEP:</label>
+                <input
+                  type="text"
+                  name="nome"
+                  id="nome"
+                  placeholder="00000-000"
+                  class="block"
+                />
+              </div>
+              <button>
+                <a href="#">Buscar</a>
+              </button>
+            </div>
+            <div class="logradouro">
+              <label for="logradouro">Logradouro:</label>
+              <input
+                type="text"
+                name="logradouro"
+                id="logradouro"
+                placeholder="Rua / Avenida / Alameda"
+                class="block"
+              />
+            </div>
+            <div class="numcompl">
+              <div class="numero">
+                <label for="num">Número:</label>
+                <input
+                  type="number"
+                  name="num"
+                  id="num"
+                  placeholder="Número"
+                  class="block"
+                />
+              </div>
+
+              <input
+                type="text"
+                name="compl"
+                id="compl"
+                placeholder="Bloco / Apto. / Unidade"
+                class="block"
+              />
+            </div>
+          </div>
+
+          <!-- BLOCO 2 -->
+
+          <div class="block-2">
+            <div class="bairro">
+              <label for="bairro">Bairro:</label>
+              <input
+                type="bairro"
+                name="bairro"
+                id="bairro"
+                placeholder="Bairro"
+                class="block"
+              />
+            </div>
+            <div class="cidade">
+              <label for="cidade">Cidade:</label>
+              <input
+                type="text"
+                name="cidade"
+                id="cidade"
+                placeholder="Cidade"
+                class="block"
+              />
+            </div>
+            <div class="estado">
+              <label for="estado">Estado:</label>
+              <input
+                type="estado"
+                name="estado"
+                id="estado"
+                placeholder="Estado"
+                class="block"
+              />
+            </div>
+          </div>
+
+          <!-- BLOCO 3 -->
+
+          <div class="block-3">
+            <div class="complemento">
+              <label for="complemento">Complemento:</label>
+              <textarea
+                name="complemento"
+                id="complemento"
+                placeholder="Em frente a... / Perto de..."
+                class="block"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

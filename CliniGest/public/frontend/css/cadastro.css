@@ -1,0 +1,255 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  min-width: 0;
+}
+
+.sidebar {
+  width: 60px;
+  flex-shrink: 0;
+  background-color: #f4f4f4;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* =========================
+   CARDS DA MAIN
+========================= */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 16px;
+  border-radius: 19px;
+  padding: 20px;
+  background-color: #ffffff;
+  min-width: 0;
+}
+
+/* =========================
+   INPUTS E SELECTS
+========================= */
+
+.card input:not([type="file"]),
+.block-3 select {
+  width: 100%;
+  max-width: 100%;
+  height: 45px; /* Aumentado para melhor estética */
+  padding: 0 15px;
+  background-color: #f8f9fa; /* Fundo mais limpo */
+  border-radius: 8px; /* Bordas mais suaves */
+  border: 1px solid #dce0e4; /* Borda discreta */
+  margin: 8px 0 16px 0;
+  color: #495057;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.card input:not([type="file"]):focus,
+.block-3 select:focus {
+  border-color: #a2a2a2;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(162, 162, 162, 0.1);
+}
+
+.card input[type="file"] {
+  display: none !important;
+}
+
+.card label {
+  font-weight: bold;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* =========================
+   TITULO
+========================= */
+
+.card-title {
+  flex-basis: 100%;
+  min-width: 0;
+}
+
+.card-title h3 {
+  margin: 0;
+  margin-bottom: 16px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+/* =========================
+   BLOCKS
+========================= */
+
+.block-1,
+.block-2,
+.block-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  width: 100%;
+}
+
+.block {
+  display: block;
+}
+
+/* =========================
+   FOTO PERFIL
+========================= */
+
+.foto-perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.foto-perfil img {
+  margin: 20px 0 0 0;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.foto-perfil label {
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.foto-perfil button {
+  display: inline-flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 220px;
+  height: 38px;
+  background-color: #fff;
+  border-radius: 9px;
+  border: solid #a2a2a2 1px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #454545;
+  font-weight: 300;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.foto-perfil button:hover {
+  background-color: #f2f2f2;
+}
+
+.foto-perfil button img {
+  margin: 0;
+  max-width: 20px;
+  height: auto;
+}
+
+/* =========================
+   NOME / SOBRENOME
+========================= */
+
+.nome-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  min-width: 0;
+  width: 100%;
+}
+
+.nome-sobrenome {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: 10px;
+  min-width: 0;
+  width: 100%;
+}
+
+.nome-sobrenome input {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 768px) {
+  .sidebar {
+    width: 250px;
+  }
+
+  .card {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 25px 25px 13px 25px;
+    padding: 25px;
+  }
+
+  .card input:not([type="file"]),
+  .block-3 select {
+    max-width: 346px;
+    margin: 8px 0 15px 0;
+  }
+
+  .card-title h3 {
+    margin-bottom: 25px;
+  }
+
+  .block-1,
+  .block-2,
+  .block-3,
+  .nome-group {
+    width: auto;
+  }
+
+  .foto-perfil {
+    width: auto;
+  }
+
+  .foto-perfil img {
+    margin: 50px 50px 0 50px;
+  }
+
+  .foto-perfil button {
+    margin: 30px 50px 50px 50px;
+    width: 170px;
+  }
+
+  .nome-sobrenome {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nome-sobrenome input {
+    max-width: 168px;
+    flex: 1;
+  }
+}
